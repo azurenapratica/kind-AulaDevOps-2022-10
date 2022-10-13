@@ -33,10 +33,10 @@ public class ChamadosService
         {
             DataAbertura = DateTime.UtcNow.AddHours(-3).ToString("dd/MM/yyyy HH:mm:ss"),
             Email = requisicaoSuporte.Email,
-            //DescritivoRequisicao = requisicaoSuporte.Email, // FIXME: Simulacao de falha
-            DescritivoRequisicao = requisicaoSuporte.DescritivoRequisicao,
-            //Solucionado = true // FIXME: Simulacao de falha
-            Solucionado = false            
+            DescritivoRequisicao = requisicaoSuporte.Email, // FIXME: Simulacao de falha
+            //DescritivoRequisicao = requisicaoSuporte.DescritivoRequisicao,
+            Solucionado = true // FIXME: Simulacao de falha
+            //Solucionado = false            
         };
         var idChamadoSuporte = _repository.Save(chamado);
 
